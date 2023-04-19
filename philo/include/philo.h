@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 11:27:14 by jsavard           #+#    #+#             */
-/*   Updated: 2023/04/19 11:51:10 by jsavard          ###   ########.fr       */
+/*   Updated: 2023/04/19 12:22:17 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ typedef struct s_philo_struct
 }	t_philo_struct;
 
 int		all_argv_int(char **argv, int argc);
+int		validate_int(t_philo_struct *philo_struct);
 long	ft_atoi(const char *str);
 #endif

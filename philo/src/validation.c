@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 11:38:57 by jsavard           #+#    #+#             */
-/*   Updated: 2023/04/19 12:03:46 by jsavard          ###   ########.fr       */
+/*   Updated: 2023/04/19 12:22:02 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,5 +81,30 @@ int	all_argv_int(char **argv, int argc)
 	}
 	if (i < 5)
 		return (0);
+	return (1);
+}
+
+int	validate_int(t_philo_struct *philo_struct)
+{
+	if (philo_struct->nb_philo < 1)
+	{
+		printf("Vous devez avoir au minimum 1 philosophe!");
+		return (0);
+	}
+	if (philo_struct->time_to_die < 1)
+	{
+		printf("Vous devez laiser plus de temps !");
+		return (0);
+	}
+	if (philo_struct->time_to_eat < 1)
+	{
+		printf("Vous devez laiser plus de temps !");
+		return (0);
+	}
+	if (philo_struct->time_to_sleep < 1)
+	{
+		printf("Vous devez laiser plus de temps !");
+		return (0);
+	}
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 10:53:51 by jsavard           #+#    #+#             */
-/*   Updated: 2023/04/19 12:03:13 by jsavard          ###   ########.fr       */
+/*   Updated: 2023/04/19 12:25:32 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,12 @@ int	main(int argc, char **argv)
 	if ((argc < 5 || argc > 6) || all_argv_int(argv, argc) == 0)
 		printf("Mauvais parametres !");
 	else
+	{
 		set_data(&philo_struct, argv, argc);
+		if (validate_int(&philo_struct) != 0)
+		{
+			//Do thing
+		}
+	}
 	return (0);
 }
